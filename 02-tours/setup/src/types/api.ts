@@ -6,7 +6,9 @@ export type Tour = {
   price: string;
 };
 
-// export type ToursData = {
-//   tours: Tour[]
-// };
+export type ToursProps = {
+  tours: Tour[]
+  setTours: React.Dispatch<React.SetStateAction<Tour[]>>
+
+};
 

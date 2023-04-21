@@ -21,11 +21,13 @@ function App() {
       const tours = await response.json()
       setLoading(false)
       setTours(tours)
+
     } catch (error) {
       setLoading(false)
       console.log(error)
     }
   }
+  console.log(tours)
   useEffect(() => {
     fetchTours()
   }, [])
