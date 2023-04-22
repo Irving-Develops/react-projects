@@ -1,6 +1,7 @@
 import React from "react"
 import {ToursProps } from "../types/api";
 import Button from "./Button";
+import ReadMore from "./ReadMore";
 
 const Tours= ({tours, setTours}: ToursProps) => {
     console.log(tours)
@@ -9,7 +10,7 @@ const Tours= ({tours, setTours}: ToursProps) => {
     };
   return (
     <>
-      {tours.map((tour, index) => (
+      {tours.map((tour) => (
         <article key={tour.id} className="single-tour">
           <img src={tour.image} alt={tour.name}></img>
           <footer>
@@ -17,11 +18,7 @@ const Tours= ({tours, setTours}: ToursProps) => {
               <h4>{tour.name}</h4>
               <h4 className="tour-price">{tour.price}</h4>
             </div>
-            <p>
-              {tour.info}
-              <button>read more</button>
-            </p>
-            {/* <button className="delete-btn">Not Interested</button> */}
+            <ReadMore info={tour.info} />
             <Button
               children={"Not Interested"}
               styles={"delete-btn"}
