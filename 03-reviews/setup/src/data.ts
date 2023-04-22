@@ -1,4 +1,5 @@
-const reviews = [
+import { Review } from "types";
+const reviews: Review[] = [
   {
     id: 1,
     name: 'susan smith',
