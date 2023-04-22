@@ -38,6 +38,8 @@ export default function Review({ review, id, setId }: ReviewProps) {
         }
         setId(newId);
       };
+
+      
   return (
     <article className="review">
       <div className="img-container">
